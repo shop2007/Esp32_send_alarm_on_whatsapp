@@ -10,11 +10,11 @@ Il sistema controlla un ingresso PIR o un contatto di allarme e rileva automatic
 
 È possibile configurare:
 - Il livello di allarme attivo:
-  - Allarme attivo con ingresso a `0`
-  - Allarme attivo con ingresso a `1`
+  - Allarme attivo con ingresso a `0` (0 volt)
+  - Allarme attivo con ingresso a `1` (+12volt)
 - Ritardo di uscita prima dell’inserimento effettivo
 - Ritardo di ingresso prima dell’attivazione della sirena
-- Durata dell’attivazione del relè
+- Durata dell’attivazione del relè sirena
 
 Questa flessibilità permette di adattare il dispositivo a sensori normalmente aperti, normalmente chiusi e a diverse configurazioni elettriche dell’impianto.
 
@@ -40,7 +40,7 @@ La configurazione viene salvata in EEPROM e rimane memorizzata anche dopo lo spe
 ### Diagnostica durante l’installazione
 La modalità diagnostica consente di verificare rapidamente il corretto collegamento tra sensore e relè.
 
-Il comando `18` fa seguire al relè lo stato dell’ingresso PIR. In questo modo l’installatore può controllare:
+Il comando `18` del menù fa seguire al relè lo stato dell’ingresso PIR. In questo modo l’installatore può controllare:
 - Se il sensore cambia realmente stato
 - Se il livello attivo è impostato correttamente
 - Se il relè è normalmente aperto o normalmente chiuso
@@ -54,12 +54,12 @@ La modalità diagnostica si interrompe semplicemente digitando `Q`.
 In caso di intrusione, il sistema può inviare automaticamente un messaggio WhatsApp.
 
 Sono supportate:
-- Notifica dell’allarme
-- Messaggio di prova
+- Notifica dell’allarme 
+- Invio su comando di un messaggio di prova
 - Promemoria periodici durante un allarme prolungato
 - Gestione di un secondo destinatario
-- Abilitazione o disabilitazione delle trasmissioni
-- Configurazione separata del numero e delle API key
+- Abilitazione o disabilitazione dei messaggi whatsapp (durante la messa a punto può essere utile)
+- Configurazione separata del numero e delle API key per i due utenti whatsapp
 
 Questa funzione consente di ricevere una segnalazione anche quando ci si trova lontani dal camper.
 
@@ -68,7 +68,7 @@ Questa funzione consente di ricevere una segnalazione anche quando ci si trova l
 ### Controllo Bluetooth
 Il dispositivo integra una connessione Bluetooth BLE con interfaccia tipo UART.
 
-Attraverso un’app compatibile è possibile:
+Attraverso un’app tipo Bluetooth terminal è possibile:
 - Inserire e disinserire l’allarme
 - Consultare lo stato del sistema
 - Modificare i parametri
@@ -94,7 +94,7 @@ Tutti i principali parametri sono configurabili dal menu setup:
 - Abilitazione WhatsApp
 - Test sirena
 - Test WhatsApp
-- Secondo numero
+- Secondo numero WhatsApp
 - Seconda API key
 - Inserimento automatico all’avvio
 - Test connessione Wi-Fi
@@ -109,11 +109,9 @@ Le impostazioni vengono conservate nella memoria EEPROM con controllo CRC, per r
 ### Inserimento automatico
 La funzione di auto-inserimento permette di attivare automaticamente l’allarme all’avvio del dispositivo.
 
-È utile, ad esempio, quando:
-- Il camper deve essere sempre protetto
-- Non si desidera inserire manualmente l’allarme
-- Il sistema viene alimentato insieme all’impianto del veicolo
-- Si vuole ripristinare automaticamente la protezione dopo un riavvio
+È utile, ad esempio, quando anzichè usare il bluetooth si preferisce attivare il sistema tramite un interruttore o una chiave nascosti; questo implica:
+- Impostare tempo di uscita
+- Impostare tepo di entrata
 
 ---
 
