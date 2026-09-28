@@ -6,7 +6,7 @@ Proteggere il proprio camper significa poter contare su un sistema affidabile, c
 ---
 
 ### Protezione contro le intrusioni
-Il sistema controlla un ingresso PIR o un contatto di allarme e rileva automaticamente l’apertura o l’attivazione del sensore.
+Il sistema controlla un ingresso PIR o un contatto di allarme preesistente, e rileva automaticamente l’apertura o l’attivazione del sensore.
 
 È possibile configurare:
 - Il livello di allarme attivo:
@@ -28,6 +28,7 @@ L’uscita relè può essere adattata al tipo di dispositivo collegato:
 - Segnalatore luminoso
 - Dispositivo ausiliario
 - Ingresso di un sistema di allarme esistente
+- Nulla, se si usa solo l'avviso su Whatsapp
 
 Con il comando dedicato è possibile invertire il funzionamento dell’uscita:
 - Relè attivo durante l’allarme
@@ -68,13 +69,13 @@ Questa funzione consente di ricevere una segnalazione anche quando ci si trova l
 ### Controllo Bluetooth
 Il dispositivo integra una connessione Bluetooth BLE con interfaccia tipo UART.
 
-Attraverso un’app tipo Bluetooth terminal è possibile:
+Attraverso una app (quella Android è free) tipo BLE Bluetooth terminal è possibile:
 - Inserire e disinserire l’allarme
 - Consultare lo stato del sistema
 - Modificare i parametri
 - Avviare test
 - Eseguire la diagnostica del sensore
-- Configurare Wi-Fi e notifiche
+- Configurare reti Wi-Fi e notifiche
 
 La comunicazione BLE utilizza pairing protetto, autenticazione e PIN di accesso.
 
@@ -109,7 +110,7 @@ Le impostazioni vengono conservate nella memoria EEPROM con controllo CRC, per r
 ### Inserimento automatico
 La funzione di auto-inserimento permette di attivare automaticamente l’allarme all’avvio del dispositivo.
 
-È utile, ad esempio, quando anzichè usare il bluetooth si preferisce attivare il sistema tramite un interruttore o una chiave nascosti; questo implica:
+È utile, ad esempio, quando anzichè usare il bluetooth si preferisce attivare il sistema tramite un interruttore o una chiave elettromeccanica nascosti; questo implica:
 - Impostare tempo di uscita
 - Impostare tepo di entrata
 
