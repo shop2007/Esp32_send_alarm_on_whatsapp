@@ -68,9 +68,10 @@ Questa funzione consente di ricevere una segnalazione anche quando ci si trova l
 
 ### Controllo Bluetooth
 Il dispositivo integra una connessione Bluetooth BLE con interfaccia tipo UART.
+I comandi sono protetti da PIN a 5 cifre (esempio 12345)
 
 Attraverso una app (quella Android è free) tipo BLE Bluetooth terminal è possibile:
-- Inserire e disinserire l’allarme
+- Inserire e disinserire l’allarme (i12345   d123455)
 - Consultare lo stato del sistema
 - Modificare i parametri
 - Avviare test
